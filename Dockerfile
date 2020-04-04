@@ -1,4 +1,4 @@
-FROM alpine:3.11.5
+FROM alpine:latest
 RUN apk add --update \
     bash \
     aws-cli
