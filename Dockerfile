@@ -1,5 +1,7 @@
-FROM alpine:latest
-RUN apk add --update \
+FROM alpine:3.11.5
+COPY ./edge_repositories /etc/apk/repositories
+RUN apk update
+RUN apk add \
     bash \
     aws-cli
 ENV AWS_SHARED_CREDENTIALS_FILE "/credentials/credentials"
